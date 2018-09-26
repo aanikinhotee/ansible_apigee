@@ -1,13 +1,13 @@
 # For OpenLDAP on IP4 and IP5
-IP1=dev-project33 # zookeeper and cassandra
-IP2=dev-project33 # zookeeper and cassandra
-IP3=dev-project33 # zookeeper and cassandra
-IP4=dev-project33 # ldap 
-IP5=dev-project33 # ldap
-IP6=dev-project33 # managemnnt1
-IP7=dev-project33 # management2
-IP8=dev-project33 # pg-master
-IP9=dev-project33 # pg-standby
+IP1=$(getent ahostsv4 "{{ host1 }}" |grep STREAM | awk '{ print $1 }') # zookeeper and cassandra 1
+IP2=$(getent ahostsv4 "{{ host2 }}" |grep STREAM | awk '{ print $1 }') # zookeeper and cassandra 2
+IP3=$(getent ahostsv4 "{{ host3 }}" |grep STREAM | awk '{ print $1 }') # zookeeper and cassandra 3
+IP4=$(getent ahostsv4 "{{ host4 }}" |grep STREAM | awk '{ print $1 }') # ldap 1
+IP5=$(getent ahostsv4 "{{ host5 }}" |grep STREAM | awk '{ print $1 }') # ldap 2
+IP6=$(getent ahostsv4 "{{ host6 }}" |grep STREAM | awk '{ print $1 }') # managemnnt1
+IP7=$(getent ahostsv4 "{{ host7 }}" |grep STREAM | awk '{ print $1 }') # management2
+IP8=$(getent ahostsv4 "{{ host8 }}" |grep STREAM | awk '{ print $1 }') # pg-master
+IP9=$(getent ahostsv4 "{{ host9 }}" |grep STREAM | awk '{ print $1 }') # pg-standby
 HOSTIP=$(hostname -i)
 ENABLE_SYSTEM_CHECK=y
 ADMIN_EMAIL=opdk@google.com

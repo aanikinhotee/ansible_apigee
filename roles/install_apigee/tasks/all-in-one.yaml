@@ -1,7 +1,3 @@
-- name: include common installations
-  include_tasks: common.yaml
-
-
 - name: copying apigee config from template
   become: true
   template: src=apigeeConfigFile-1node dest=/opt/apigee/installConfig owner=apigee group=apigee mode=0664

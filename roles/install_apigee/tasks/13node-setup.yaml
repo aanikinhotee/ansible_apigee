@@ -1,7 +1,3 @@
-- name: include common installations
-  include_tasks: common.yaml
-
-
 - name: copying apigee config from template (not LDAP)
   become: true
   template: src=apigeeConfigFile-13node-common dest=/opt/apigee/installConfig owner=apigee group=apigee mode=0664
@@ -35,4 +31,47 @@
     state: enabled
     zone: public
     immediate: true
+
+
+- name: open zookeeper port in firewall
+  become: true
+  firewalld:
+    port: 2181/tcp
+    permanent: true
+    state: enabled
+    zone: public
+    immediate: true
+  when: component == "ds"
+
+- name: open cassandra port 9160 in firewall
+  become: true
+  firewalld:
+    port: 9160/tcp
+    permanent: true
+    state: enabled
+    zone: public
+    immediate: true
+  when: component == "ds"
+
+
+- name: open cassandra port 9042 in firewall
+  become: true
+  firewalld:
+    port: 9042/tcp
+    permanent: true
+    state: enabled
+    zone: public
+    immediate: true
+  when: component == "ds"
+
+
+- name: open ldap in firewall
+  become: true
+  firewalld:
+    port: 10389/tcp
+    permanent: true
+    state: enabled
+    zone: public
+    immediate: true
+  when: component == "ld"
 

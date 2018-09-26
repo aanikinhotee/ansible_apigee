@@ -1,17 +1,77 @@
-- hosts: apigee
+- hosts: all
   become: no
   gather_facts: no
   serial: 1
   roles:
 #    - update
-    - install_apigee
-
+    - install_apigee_common
   vars_prompt:
     - name: "apigee_password"
       prompt: "what is apigee installation password?"
 
 
-#- hosts: apigee-ms
+
+- hosts: apigee-ds
+  become: no
+  gather_facts: no
+  serial: 1
+  roles:
+    - install_apigee
+  vars:
+    component: "ds"
+
+
+- hosts: apigee-ld
+  become: no
+  gather_facts: no
+  serial: 1
+  roles:
+    - install_apigee
+  vars:
+    component: "ld"
+
+
+- hosts: apigee-ms
+  become: no
+  gather_facts: no
+  serial: 1
+  roles:
+    - install_apigee
+  vars:
+    component: "ms"
+
+
+- hosts: apigee-ps
+  become: no
+  gather_facts: no
+  serial: 1
+  roles:
+    - install_apigee
+  vars:
+    component: "ps"
+
+
+- hosts: apigee-rmp
+  become: no
+  gather_facts: no
+  serial: 1
+  roles:
+    - install_apigee
+  vars:
+    component: "rmp"
+
+
+- hosts: apigee-qs
+  become: no
+  gather_facts: no
+  serial: 1
+  roles:
+    - install_apigee
+  vars:
+    component: "qs"
+
+
+#- hosts: apigee-provision
 #  become: no
 #  gather_facts: no
 #  serial: 1

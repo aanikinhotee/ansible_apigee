@@ -1,11 +1,36 @@
-[apigee]
-dev-project33 component=ds
-#dev-project33 component=ld
-#dev-project33 component=ms
-#dev-project33 component=ps
-#dev-project33 component=rmp
-#dev-project33 component=qs
+[apigee-ds]
+dev-project33
 
-#[apigee-ms]
-#dev-project33
+[apigee-ld]
+dev-project33
 
+[apigee-ms]
+dev-project33
+
+[apigee-ps]
+dev-project33
+
+[apigee-rmp]
+dev-project33
+
+[apigee-qs]
+dev-project33
+
+[apigee-provision]
+dev-project33
+
+
+[all:vars]
+# cassandra
+host1=dev-project33
+host2=dev-project33d
+host3=dev-project33e
+# ldap
+host4=dev-project33 
+host5=dev-project33 
+# management
+host6=dev-project33 
+host7=dev-project33 
+# postgre
+host8=dev-project33
+host9=dev-project33
