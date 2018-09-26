@@ -1,17 +1,17 @@
 # For OpenLDAP on IP4 and IP5
-IP1=IP_or_DNS_name_of_Node_1
-IP2=IP_or_DNS_name_of_Node_2
-IP3=IP_or_DNS_name_of_Node_3
-IP4=IP_or_DNS_name_of_Node_4
-IP5=IP_or_DNS_name_of_Node_5
-IP6=IP_or_DNS_name_of_Node_6
-IP7=IP_or_DNS_name_of_Node_7
-IP8=IP_or_DNS_name_of_Node_8
-IP9=IP_or_DNS_name_of_Node_9
+IP1=dev-project33 # zookeeper and cassandra
+IP2=dev-project33 # zookeeper and cassandra
+IP3=dev-project33 # zookeeper and cassandra
+IP4=dev-project33 # ldap 
+IP5=dev-project33 # ldap
+IP6=dev-project33 # managemnnt1
+IP7=dev-project33 # management2
+IP8=dev-project33 # pg-master
+IP9=dev-project33 # pg-standby
 HOSTIP=$(hostname -i)
 ENABLE_SYSTEM_CHECK=y
 ADMIN_EMAIL=opdk@google.com
-APIGEE_ADMINPW=ADMIN_PASSWORD
+APIGEE_ADMINPW=ADMIN_PASSWORD1a
 # First OpenLDAP Server on IP4
 MSIP=$IP6
 USE_LDAP_REMOTE_HOST=n

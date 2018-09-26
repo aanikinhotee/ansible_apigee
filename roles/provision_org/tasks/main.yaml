@@ -1,0 +1,9 @@
+- name: copying organization config from template
+  become: true
+  template: src=orgConfigFile dest=/opt/apigee/orgConfig owner=apigee group=apigee mode=0664
+
+
+- name: Provision new organization
+  become: true
+  shell: "/opt/apigee/apigee-service/bin/apigee-service apigee-provision setup-org -f /opt/apigee/orgConfig"
+

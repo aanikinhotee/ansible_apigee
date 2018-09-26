@@ -1,4 +1,4 @@
-IP1=$(hostname -i)
+IP1=dev-project33
 
 # Specify the IP or DNS name of the Management Server.
 MSIP="$IP1"

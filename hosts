@@ -1,5 +1,11 @@
 [apigee]
-dev-project11 component=ds
-dev-project12 component=ds
-dev-project13 component=ds
+dev-project33 component=ds
+#dev-project33 component=ld
+#dev-project33 component=ms
+#dev-project33 component=ps
+#dev-project33 component=rmp
+#dev-project33 component=qs
+
+#[apigee-ms]
+#dev-project33
 
