@@ -1,0 +1,46 @@
+# For all components except OpenLDAP
+IP1=IP_or_DNS_name_of_Node_1
+IP2=IP_or_DNS_name_of_Node_2
+IP3=IP_or_DNS_name_of_Node_3
+IP4=IP_or_DNS_name_of_Node_4
+IP5=IP_or_DNS_name_of_Node_5
+IP6=IP_or_DNS_name_of_Node_6
+IP7=IP_or_DNS_name_of_Node_7
+IP8=IP_or_DNS_name_of_Node_8
+IP9=IP_or_DNS_name_of_Node_9
+HOSTIP=$(hostname -i)
+ENABLE_SYSTEM_CHECK=y
+ADMIN_EMAIL=opdk@google.com
+APIGEE_ADMINPW=ADMIN_PASSWORD
+LICENSE_FILE=/tmp/license.txt
+# First Management Server on IP6
+MSIP=$IP6
+USE_LDAP_REMOTE_HOST=y
+LDAP_HOST=$IP4
+LDAP_PORT=10389
+# Second Management Server on IP7
+# MSIP=$IP7
+# USE_LDAP_REMOTE_HOST=y
+# LDAP_HOST=$IP5
+# LDAP_PORT=10389
+# Same password for both OpenLDAPs.
+APIGEE_LDAPPW=LDAP_PASSWORD 
+MP_POD=gateway
+REGION=dc-1
+ZK_HOSTS="$IP1 $IP2 $IP3"
+ZK_CLIENT_HOSTS="$IP1 $IP2 $IP3"
+# Must use IP addresses for CASS_HOSTS, not DNS names.
+CASS_HOSTS="$IP1 $IP2 $IP3"
+# Default is postgres
+PG_PWD=postgres
+PG_MASTER=$IP8
+PG_STANDBY=$IP9
+SKIP_SMTP=n
+SMTPHOST=smtp.example.com
+SMTPUSER=smtp@example.com
+# omit for no username
+SMTPPASSWORD=SMTP_PASSWORD
+# omit for no password
+SMTPSSL=n
+SMTPPORT=25
+SMTPMAILFROM="My Company <myco@company.com>"

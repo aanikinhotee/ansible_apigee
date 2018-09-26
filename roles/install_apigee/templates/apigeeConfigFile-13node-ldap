@@ -1,0 +1,28 @@
+# For OpenLDAP on IP4 and IP5
+IP1=IP_or_DNS_name_of_Node_1
+IP2=IP_or_DNS_name_of_Node_2
+IP3=IP_or_DNS_name_of_Node_3
+IP4=IP_or_DNS_name_of_Node_4
+IP5=IP_or_DNS_name_of_Node_5
+IP6=IP_or_DNS_name_of_Node_6
+IP7=IP_or_DNS_name_of_Node_7
+IP8=IP_or_DNS_name_of_Node_8
+IP9=IP_or_DNS_name_of_Node_9
+HOSTIP=$(hostname -i)
+ENABLE_SYSTEM_CHECK=y
+ADMIN_EMAIL=opdk@google.com
+APIGEE_ADMINPW=ADMIN_PASSWORD
+# First OpenLDAP Server on IP4
+MSIP=$IP6
+USE_LDAP_REMOTE_HOST=n
+LDAP_TYPE=2
+LDAP_SID=1
+LDAP_PEER=$IP5
+# Second OpenLDAP Server on IP5
+# MSIP=$IP7
+# USE_LDAP_REMOTE_HOST=n
+# LDAP_TYPE=2
+# LDAP_SID=2
+# LDAP_PEER=$IP4
+# Set same password for both OpenLDAPs.
+APIGEE_LDAPPW=LDAP_PASSWORD
