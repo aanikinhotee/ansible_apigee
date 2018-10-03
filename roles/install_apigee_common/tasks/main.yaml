@@ -23,18 +23,19 @@
     policy: targeted
     state: permissive
 
-- name: copying rpm files
-  copy:
-    src: rpms
-    dest: /tmp/
-    owner: admina
-    group: admina
-    mode: 0644
+
+#- name: copying rpm files
+#  copy:
+#    src: rpms
+#    dest: /tmp/
+#    owner: admina
+#    group: admina
+#    mode: 0644
 
 - name: install java rpm from a local file
   become: true
   yum:
-    name: /tmp/rpms/jdk-8u181-linux-x64.rpm
+    name: java-1.8.0-openjdk
     state: present
 
 
