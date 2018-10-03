@@ -1,16 +1,3 @@
-- hosts: all
-  become: no
-  gather_facts: no
-  serial: 1
-  roles:
-    - update
-    - install_apigee_common
-  vars_prompt:
-    - name: "apigee_password"
-      prompt: "what is apigee installation password?"
-
-
-
 - hosts: apigee-ds
   become: no
   gather_facts: no
