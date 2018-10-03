@@ -1,36 +1,45 @@
 [apigee-ds]
-dev-project33
+T1AZ-ApigeeCas1 
+T1AZ-ApigeeCas2 
+T1AZ-ApigeeCas3
 
 [apigee-ld]
-dev-project33
+T1AZ-ApiOLDAP1
+T1AZ-ApiOLDAP2
 
 [apigee-ms]
-dev-project33
+T1AZ-ApiMEdge1
+T1AZ-ApiMEdge2
 
 [apigee-ps]
-dev-project33
+T1AZ-ApiAnalyt1
+T1AZ-ApiAnalyt2
 
 [apigee-rmp]
-dev-project33
+T1AZ-ApiMProc1
+T1AZ-ApiMProc2
+#S1AZ-ApiMProc1
+#S1AZ-ApiMProc2
 
 [apigee-qs]
-dev-project33
+T1AZ-ApiAQpid1
+T1AZ-ApiAQpid2
+
 
 [apigee-provision]
-dev-project33
 
 
 [all:vars]
 # cassandra
-host1=dev-project33
-host2=dev-project33d
-host3=dev-project33e
+host1=T1AZ-ApigeeCas1
+host2=T1AZ-ApigeeCas2
+host3=T1AZ-ApigeeCas3
 # ldap
-host4=dev-project33 
-host5=dev-project33 
+host4=T1AZ-ApiOLDAP1
+host5=T1AZ-ApiOLDAP2
 # management
-host6=dev-project33 
-host7=dev-project33 
+host6=T1AZ-ApiMEdge1
+host7=T1AZ-ApiMEdge2
 # postgre
-host8=dev-project33
-host9=dev-project33
+host8=T1AZ-ApiAnalyt1
+host9=T1AZ-ApiAnalyt2
