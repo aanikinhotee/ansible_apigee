@@ -10,8 +10,8 @@ IP8=$(getent ahostsv4 "{{ host8 }}" |grep STREAM | awk '{ print $1 }') # pg-mast
 IP9=$(getent ahostsv4 "{{ host9 }}" |grep STREAM | awk '{ print $1 }') # pg-standby
 HOSTIP=$(hostname -i)
 ENABLE_SYSTEM_CHECK=y
-ADMIN_EMAIL=opdk@google.com
-APIGEE_ADMINPW=ADMIN_PASSWORD1a
+ADMIN_EMAIL=anton.anikin@consult.luminorgroup.com
+APIGEE_ADMINPW=Anton123
 # First OpenLDAP Server on IP4
 MSIP=$IP6
 USE_LDAP_REMOTE_HOST=n
@@ -19,10 +19,10 @@ LDAP_TYPE=2
 LDAP_SID=1
 LDAP_PEER=$IP5
 # Second OpenLDAP Server on IP5
-# MSIP=$IP7
-# USE_LDAP_REMOTE_HOST=n
-# LDAP_TYPE=2
-# LDAP_SID=2
-# LDAP_PEER=$IP4
+MSIP=$IP7
+USE_LDAP_REMOTE_HOST=n
+LDAP_TYPE=2
+LDAP_SID=2
+LDAP_PEER=$IP4
 # Set same password for both OpenLDAPs.
 APIGEE_LDAPPW=LDAP_PASSWORD

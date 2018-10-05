@@ -2,16 +2,16 @@
   copy:
     src: installer/bootstrap_4.18.05.sh
     dest: /tmp/bootstrap_4.18.05.sh
-    owner: admina
-    group: admina
+    owner: root
+    group: root
     mode: 0755
 
 - name: copying license file
   copy:
     src: installer/license.txt
     dest: /tmp/license.txt
-    owner: admina
-    group: admina
+    owner: root
+    group: root
     mode: 0755
 
 

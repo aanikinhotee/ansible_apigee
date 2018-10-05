@@ -11,8 +11,8 @@ IP9=$(a=$(getent ahostsv4 "{{ host9 }}" |grep STREAM | awk '{ print $1 }'); [ ! 
 HOSTIP=$(hostname -i)
 ENABLE_SYSTEM_CHECK=y
 ENABLE_DYNAMIC_HOSTIP=y
-ADMIN_EMAIL=opdk@google.com
-APIGEE_ADMINPW=ADMIN_PASSWORD1a
+ADMIN_EMAIL=anton.anikin@consult.luminorgroup.com
+APIGEE_ADMINPW=Anton123
 LICENSE_FILE=/tmp/license.txt
 # First Management Server on IP6
 MSIP=$IP6
@@ -20,10 +20,10 @@ USE_LDAP_REMOTE_HOST=y
 LDAP_HOST=$IP4
 LDAP_PORT=10389
 # Second Management Server on IP7
-# MSIP=$IP7
-# USE_LDAP_REMOTE_HOST=y
-# LDAP_HOST=$IP5
-# LDAP_PORT=10389
+MSIP=$IP7
+USE_LDAP_REMOTE_HOST=y
+LDAP_HOST=$IP5
+LDAP_PORT=10389
 # Same password for both OpenLDAPs.
 APIGEE_LDAPPW=LDAP_PASSWORD 
 MP_POD=gateway
@@ -37,11 +37,11 @@ PG_PWD=postgres
 PG_MASTER=$IP8
 PG_STANDBY=$IP9
 SKIP_SMTP=n
-SMTPHOST=smtp.example.com
-SMTPUSER=smtp@example.com
+SMTPHOST=pdlt-mail3.onelum.net
+SMTPUSER=
 # omit for no username
-SMTPPASSWORD=SMTP_PASSWORD
+SMTPPASSWORD=
 # omit for no password
 SMTPSSL=n
 SMTPPORT=25
-SMTPMAILFROM="My Company <myco@company.com>"
+SMTPMAILFROM="Luminor <anton.anikin@consult.luminorgroup.com>"

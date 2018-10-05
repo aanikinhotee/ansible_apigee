@@ -22,6 +22,7 @@
     state: enabled
     zone: public
     immediate: true
+  when: component == "ms"
 
 - name: open edge ui port in firewall
   become: true
@@ -31,6 +32,7 @@
     state: enabled
     zone: public
     immediate: true
+  when: component == "ms"
 
 
 - name: open zookeeper port in firewall

@@ -1,29 +1,29 @@
 [apigee-ds]
-T1AZ-ApigeeCas1 
-T1AZ-ApigeeCas2 
-T1AZ-ApigeeCas3
+T1AZ-ApigeeCas1.onelum.net 
+T1AZ-ApigeeCas2.onelum.net 
+T1AZ-ApigeeCas3.onelum.net
 
 [apigee-ld]
-T1AZ-ApiOLDAP1
-T1AZ-ApiOLDAP2
+T1AZ-ApiOLDAP1.onelum.net
+T1AZ-ApiOLDAP2.onelum.net
 
 [apigee-ms]
-T1AZ-ApiMEdge1
-T1AZ-ApiMEdge2
+T1AZ-ApiMEdge1.onelum.net
+T1AZ-ApiMEdge2.onelum.net
 
 [apigee-ps]
-T1AZ-ApiAnalyt1
-T1AZ-ApiAnalyt2
+T1AZ-ApiAnalyt1.onelum.net
+T1AZ-ApiAnalyt2.onelum.net
 
 [apigee-rmp]
-T1AZ-ApiMProc1
-T1AZ-ApiMProc2
-#S1AZ-ApiMProc1
-#S1AZ-ApiMProc2
+T1AZ-ApiMProc1.onelum.net
+T1AZ-ApiMProc2.onelum.net
+#S1AZ-ApiMProc1.onelum.net
+#S1AZ-ApiMProc2.onelum.net
 
 [apigee-qs]
-T1AZ-ApiAQpid1
-T1AZ-ApiAQpid2
+T1AZ-ApiAQpid1.onelum.net
+T1AZ-ApiAQpid2.onelum.net
 
 
 [apigee-provision]
