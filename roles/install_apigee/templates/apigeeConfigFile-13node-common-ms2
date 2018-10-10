@@ -15,15 +15,15 @@ ADMIN_EMAIL=anton.anikin@consult.luminorgroup.com
 APIGEE_ADMINPW=Anton123
 LICENSE_FILE=/tmp/license.txt
 # First Management Server on IP6
-MSIP=$IP6
-USE_LDAP_REMOTE_HOST=y
-LDAP_HOST=$IP4
-LDAP_PORT=10389
-# Second Management Server on IP7
-# MSIP=$IP7
+# MSIP=$IP6
 # USE_LDAP_REMOTE_HOST=y
-# LDAP_HOST=$IP5
+# LDAP_HOST=$IP4
 # LDAP_PORT=10389
+# Second Management Server on IP7
+MSIP=$IP7
+USE_LDAP_REMOTE_HOST=y
+LDAP_HOST=$IP5
+LDAP_PORT=10389
 # Same password for both OpenLDAPs.
 APIGEE_LDAPPW=LDAP_PASSWORD 
 MP_POD=gateway

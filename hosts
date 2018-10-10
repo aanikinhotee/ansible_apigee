@@ -8,8 +8,8 @@ T1AZ-ApiOLDAP1.onelum.net
 T1AZ-ApiOLDAP2.onelum.net
 
 [apigee-ms]
-T1AZ-ApiMEdge1.onelum.net
-T1AZ-ApiMEdge2.onelum.net
+T1AZ-ApiMEdge1.onelum.net node1=True node2=False
+T1AZ-ApiMEdge2.onelum.net node2=True node1=False
 
 [apigee-ps]
 T1AZ-ApiAnalyt1.onelum.net
@@ -31,15 +31,15 @@ T1AZ-ApiAQpid2.onelum.net
 
 [all:vars]
 # cassandra
-host1=T1AZ-ApigeeCas1
-host2=T1AZ-ApigeeCas2
-host3=T1AZ-ApigeeCas3
+host1=T1AZ-ApigeeCas1.onelum.net
+host2=T1AZ-ApigeeCas2.onelum.net
+host3=T1AZ-ApigeeCas3.onelum.net
 # ldap
-host4=T1AZ-ApiOLDAP1
-host5=T1AZ-ApiOLDAP2
+host4=T1AZ-ApiOLDAP1.onelum.net
+host5=T1AZ-ApiOLDAP2.onelum.net
 # management
-host6=T1AZ-ApiMEdge1
-host7=T1AZ-ApiMEdge2
+host6=T1AZ-ApiMEdge1.onelum.net
+host7=T1AZ-ApiMEdge2.onelum.net
 # postgre
-host8=T1AZ-ApiAnalyt1
-host9=T1AZ-ApiAnalyt2
+host8=T1AZ-ApiAnalyt1.onelum.net
+host9=T1AZ-ApiAnalyt2.onelum.net
