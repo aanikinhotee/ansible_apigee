@@ -154,3 +154,55 @@
     immediate: true
   when: component == "ld"
 
+
+- name: open router port 9001 in firewall
+  become: true
+  firewalld:
+    port: 9001/tcp
+    permanent: true
+    state: enabled
+    zone: public
+    immediate: true
+  when: component == "rmp"
+
+- name: open router port 4527 in firewall
+  become: true
+  firewalld:
+    port: 4527/tcp
+    permanent: true
+    state: enabled
+    zone: public
+    immediate: true
+  when: component == "rmp"
+
+
+- name: open router port 4528 in firewall
+  become: true
+  firewalld:
+    port: 4528/tcp
+    permanent: true
+    state: enabled
+    zone: public
+    immediate: true
+  when: component == "rmp"
+
+- name: open router port 8082 in firewall
+  become: true
+  firewalld:
+    port: 8082/tcp
+    permanent: true
+    state: enabled
+    zone: public
+    immediate: true
+  when: component == "rmp"
+
+- name: open router port 8081 in firewall
+  become: true
+  firewalld:
+    port: 8081/tcp
+    permanent: true
+    state: enabled
+    zone: public
+    immediate: true
+  when: component == "rmp"
+
